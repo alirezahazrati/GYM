@@ -1,0 +1,58 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="side" [opened]="(isHandset$ | async) === true">
+    <mat-toolbar>
+      <div>
+
+        <div class="profile">
+          <div class="profile--pic">
+            <img src="../../assets/user.png" alt="">
+          </div>
+          <div class="profile--info">
+            علیرضا حضرتی
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+    <mat-nav-list class="list">
+      <ul fxLayout="column" fxLayoutAlign="space-around start" fxLayoutGap="4rem">
+        <li fxLayout>
+          <mat-icon>dashboard</mat-icon>
+          <span>داشبورد</span>
+        </li>
+        <li fxLayout>
+          <mat-icon>person</mat-icon>
+          <span>حضور و غیاب</span>
+        </li>
+        <li fxLayout>
+          <mat-icon>pregnant_woman</mat-icon>
+          <span>ورزشکاران</span>
+        </li>
+        <li fxLayout>
+          <mat-icon>record_voice_over</mat-icon>
+          <span>مربیان</span>
+        </li>
+        <li fxLayout>
+          <mat-icon>settings</mat-icon>
+          <span>تنظیمات</span>
+        </li>
+      </ul>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" class="toolbar">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span fxLayout class="toolbar__title">سامانه مدیریت باشگاه {{ gymName }}</span>
+      <div>
+        <button class="toolbar__menu" fxLayout mat-raised-button [matMenuTriggerFor]="menu">ناحیه کاربری</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item> <mat-icon>face</mat-icon> پروفایل</button>
+          <button mat-menu-item> <mat-icon>exit_to_app</mat-icon> خروج</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+    سلام
+  </mat-sidenav-content>
+</mat-sidenav-container>

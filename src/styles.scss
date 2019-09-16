@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+html {
+  font-size: 62.5%;
+  background-color: #103c42;
+}
+
+*:not(mat-icon) {
+  font-family: IRANSans !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

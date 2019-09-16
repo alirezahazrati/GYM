@@ -1,0 +1,53 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #103c42;
+}
+.toolbar {
+
+  &__title {
+    color: #ffe837;
+  }
+
+  &__menu {
+    background-color: #ffe837;
+    color: #103c42;
+  }
+}
+.profile {
+  margin-top: 25rem;
+  margin-right: 2rem;
+
+  &--pic img {
+    width: 10rem;
+    height: 10rem;
+  }
+
+}
+.list {
+  margin-top: 22rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+
+  li {
+    cursor: pointer;
+  }
+
+  mat-icon {
+    vertical-align: middle;
+    padding-left: 1rem;
+  }
+}
